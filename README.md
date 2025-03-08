@@ -3,10 +3,10 @@
 ## Description of the Application
 
 ## Technologies used
- -Java
- -Eclipse
- -Git/GitHub
- -Sublime Text Editor
+ - Java
+ - Eclipse
+ - Git/GitHub
+ - Sublime Text Editor
 
 ## Concepts Applied
 	- Conditional Statements
