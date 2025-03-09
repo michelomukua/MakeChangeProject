@@ -13,4 +13,4 @@
 	- 
 
 ## Lessons learned
-	- Curly braces important
+	- Curly braces are very important

@@ -19,55 +19,100 @@ public class CashRegister {
 
 		if (amountPaid < amountDue) {
 			System.out.println("Please this is not enough");
-
-		}
+			System.out.println(" Error");
+		} 
 		else if (amountPaid == amountDue) {
-			System.out.println("THis is price is right");
-		}
-		else {
-			System.out.println("You will get some change back");
-			//USER STORY 4 BEGIN
+			System.out.println("That is the correct price");
+		 
+		} else {
+			System.out.print("Your change in pennies will be: ");
 			
-					
+			// For calculations, all money is converted to pennies by (*100) 
+
 			changeDue = amountPaid - amountDue;
 			System.out.println(changeDue);
-			System.out.println("This is little");
-			int twenties, tens, fives, ones; 
+
+			int twenties, tens, fives, ones;
+
+			twenties = (int) (changeDue / 2000);
+			changeDue %= 2000;
+
+			tens = (int) (changeDue / 1000);
+			changeDue %= 1000;
+
+			fives = (int) (changeDue / 500);
+			changeDue %= 500;
+
+			ones = (int) (changeDue / 100);
+			changeDue %= 100;
+
+			if (twenties == 1) {
+				System.out.println(twenties + " $20 bill");
+			}
+			if (twenties > 1) {
+				System.out.println(twenties + " $20 bills");
+			}
+			if (tens == 1) {
+				System.out.println(tens + " $10 bill");
+			}
+			if (tens > 1) {
+				System.out.println(tens + " $10 bills");
+			}
+			if (fives == 1) {
+				System.out.println(fives + " $5 bill");
+			}
+			if (fives > 1) {
+				System.out.println(fives + " $5 bills");
+			}
+			if (ones == 1) {
+				System.out.println(ones + " $1 bill:");
+			}
+			if (ones > 1) {
+				System.out.println(ones + " $1 bills:");
+			}
 			
-			twenties = (int) (changeDue/ 20); 
-			changeDue %= 20;
+			int quarters, dimes, pennies, nickels;
 			
-			tens = (int)(changeDue/ 10); 
+			quarters = (int) (changeDue / 25);
+			changeDue %= 25;
+
+			dimes = (int) (changeDue / 10);
 			changeDue %= 10;
-			
-			fives = (int) (changeDue/ 5);
+
+			nickels = (int) (changeDue / 5);
 			changeDue %= 5;
-			
-			ones = (int)(changeDue/ 1);
+
+			pennies = (int) (changeDue / 1);
 			changeDue %= 1;
-		
-			if (twenties > 0) {
-				System.out.println("Twenties: " + twenties);
-			if (tens >0) {
-				System.out.println("Tens:" + tens);
-			if (fives > 0) {
-				System.out.println("Fives:" + fives);
-			if (ones > 0) {
-				System.out.println("Ones:" + ones);
-				}
-			}
-			}
-				
-			}
 			
-			
-			
+			if (quarters == 1) {
+				System.out.println(quarters + " quarter");
+			}
+			if (quarters > 1) {
+				System.out.println(quarters + " quarters");
+			}
+			if (dimes ==  1) {
+				System.out.println(dimes + " dime");
+			}
+			if (dimes > 1) {
+				System.out.println(dimes + " dimes");
+			}
+			if (pennies == 1) {
+				System.out.println(pennies + " penny");
+			}
+			if (pennies > 1) {
+				System.out.println(pennies + " pennies");
+			}
+			if (nickels == 1) {
+				System.out.println(nickels + " nickel");
+			}
+			if (nickels > 1) {
+				System.out.println(nickels + " nickels:");
+			}
+			sc.close();
+			}
 			
 
-			
-			//USER STORY 4 END
-			
-			
 		}
 	}
 
@@ -94,4 +139,11 @@ public class CashRegister {
 	// Amount: any amount less than 20.00, Tendered: anything greater than amount:
 	// correct denominations for correct change.
 
-}
+
+
+
+
+
+
+
+
