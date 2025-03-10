@@ -33,7 +33,7 @@ public class CashRegister {
 			System.out.println(changeDue);
 
 			int twenties, tens, fives, ones;
-
+			
 			twenties = (int) (changeDue / 2000);
 			changeDue %= 2000;
 
@@ -65,10 +65,10 @@ public class CashRegister {
 				System.out.println(fives + " $5 bills");
 			}
 			if (ones == 1) {
-				System.out.println(ones + " $1 bill:");
+				System.out.println(ones + " $1 bill");
 			}
 			if (ones > 1) {
-				System.out.println(ones + " $1 bills:");
+				System.out.println(ones + " $1 bills");
 			}
 			
 			int quarters, dimes, pennies, nickels;
